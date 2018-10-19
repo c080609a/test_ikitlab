@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :scrapings, only: [:index] do
     post :run, on: :collection
   end
+  get "search", to: "homes#index"
 end
