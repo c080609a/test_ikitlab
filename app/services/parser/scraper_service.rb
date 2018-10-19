@@ -24,27 +24,27 @@ class Parser::ScraperService
     https = Net::HTTP.new(uri.host, uri.port)
     https.use_ssl = true
     post_request = Net::HTTP::Post.new(uri.path, headers)
-    
+
     post_request.body = request_body
     response = https.request(post_request)
 
-    gz = Zlib::GzipReader.new(StringIO.new(response.body.to_s))    
+    gz = Zlib::GzipReader.new(StringIO.new(response.body.to_s))
     gz.read
   end
 
   def headers
     @headers ||= {
-      'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-      'Accept-Encoding' => 'gzip, deflate',
-      'Accept-Language' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4',
-      'Upgrade-Insecure-Requests' => '1',
-      'User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36',
-      'Content-Type' => 'application/x-www-form-urlencoded',
-      'Origin' => 'https://certification.pmi.org',
-      'Cache-Control' => 'no-cache',
-      'Referer' => 'https://certification.pmi.org/registry.aspx',
-      'Connection' => 'keep-alive',
-      }
+      "Accept" => "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+      "Accept-Encoding" => "gzip, deflate",
+      "Accept-Language" => "ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4",
+      "Upgrade-Insecure-Requests" => "1",
+      "User-Agent" => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36",
+      "Content-Type" => "application/x-www-form-urlencoded",
+      "Origin" => "https://certification.pmi.org",
+      "Cache-Control" => "no-cache",
+      "Referer" => "https://certification.pmi.org/registry.aspx",
+      "Connection" => "keep-alive"
+    }
   end
 
   def request_body
@@ -57,11 +57,11 @@ class Parser::ScraperService
 
   def data
     @data ||= {
-      "__EVENTTARGET" => '',
-      "__EVENTARGUMENT" => '',
+      "__EVENTTARGET" => "",
+      "__EVENTARGUMENT" => "",
       "__VIEWSTATE" => @viewstate,
       "dph_RegistryContent$tbSearch" => @character,
-      "dph_RegistryContent$firstNameTextBox" => '',
+      "dph_RegistryContent$firstNameTextBox" => "",
       "dph_RegistryContent$wcountry" => @country,
       "dph_RegistryContent$credentialDDL" => 0,
       "dph_RegistryContent_Button1" => "Search"
