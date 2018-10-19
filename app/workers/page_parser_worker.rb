@@ -1,7 +1,7 @@
 class PageParserWorker
   include Sidekiq::Worker
 
-  def perform(char)
-    ScraperService.new(char).call
+  def perform(character)
+    Parser::ScraperService.new(character).call
   end
 end

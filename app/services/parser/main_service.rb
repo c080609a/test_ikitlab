@@ -5,8 +5,8 @@ class Parser::MainService
 
   def call
     @alphabet.each do |character|
-      # PageParserWorker.perform_async(character)
-      Parser::ScraperService.new(character).call
+      # PageParserWorker.perform_async(character) #call to background
+      Parser::ScraperService.new(character).call # call with button
     end
   end
 end

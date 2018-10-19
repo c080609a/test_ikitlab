@@ -9,13 +9,13 @@ class Parser::ScraperService
   end
 
   def call
-    get_attributes
+    attributes
   end
 
   private
 
-  def get_attributes
-    page = Nokogiri::HTML(get_html.to_s)
+  def attributes
+    page = Nokogiri::HTML(html.to_s)
     attributes = Parser::PageService.new(page).call
 
     attributes.each do |attrs|
@@ -23,7 +23,7 @@ class Parser::ScraperService
     end
   end
 
-  def get_html
+  def html
     uri = URI(@url)
     https = Net::HTTP.new(uri.host, uri.port)
     https.use_ssl = true

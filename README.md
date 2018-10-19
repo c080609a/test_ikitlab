@@ -18,7 +18,7 @@
 - Full-text search for collected data - (0.5 hours)
 - Scheduled data collection - (0.5 hours)
 
-- Deploy the script to the server and upload the result to any server
-- Normalization of the city name to a single format (as in KLADR)
+- \*Deploy the script to the server and upload the result to any server
+- \*Normalization of the city name to a single format (as in KLADR)
 
 ### Total - 9 hours

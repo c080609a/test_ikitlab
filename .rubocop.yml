@@ -41,6 +41,7 @@ Metrics/LineLength:
   Max: 120
   Exclude:
     - "config/**/*"
+    - "app/services/**/*"
 
 Style/AlignParameters:
   EnforcedStyle: with_fixed_indentation
