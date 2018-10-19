@@ -16,7 +16,11 @@ class Parser::ScraperService
 
   def get_attributes
     page = Nokogiri::HTML(get_html.to_s)
-    Parser::PageService.new(page).call
+    attributes = Parser::PageService.new(page).call
+
+    attributes.each do |attrs|
+      UserCreateForm.new(attrs).save
+    end
   end
 
   def get_html

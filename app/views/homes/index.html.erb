@@ -8,11 +8,25 @@
       <th>Country</th>
       <th>Credintial</th>
       <th>Status</th>
+      <th>Earned</th>
     </tr>
   </thead>
   <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.name %></td>
+        <td><%= user.city %></td>
+        <td><%= user.region %></td>
+        <td><%= user.country %></td>
+        <td><%= user.credential %></td>
+        <td><%= user.status %></td>
+        <td><%= Date.parse(user.earned).strftime("%B %e, %Y") %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
+<%= paginate @users %>
 
 <div class="btn-group" role="group" >
   <%= link_to 'Parse', run_scrapings_path, method: :post, class: 'btn btn-primary' %>

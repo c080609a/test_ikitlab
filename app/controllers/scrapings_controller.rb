@@ -1,6 +1,4 @@
 class ScrapingsController < ApplicationController
-  def index; end
-
   def run
     Parser::MainService.new.call
 

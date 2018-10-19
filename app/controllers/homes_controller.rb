@@ -1,3 +1,5 @@
 class HomesController < ApplicationController
-  def index; end
+  def index
+    @users = User.order(:name).page params[:page]
+  end
 end
