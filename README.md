@@ -1,24 +1,24 @@
-# README
+# Planned time
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Parser (5 hours)
+- Save to DB (0.5 hours)
+- Make a label in the UI with the display of the collected data and a button to receive data (0.5 hours)
+- Background execution of data collection - (0.5 hours)
+- Full-text search for collected data - (0.5 hours)
+- Scheduled data collection - (0.5 hours)
 
-Things you may want to cover:
+### Total 7.5 hours
 
-* Ruby version
+# Final result
 
-* System dependencies
+- Parser (6.5 hours)
+- Save to DB (0.5 hours)
+- Make a label in the UI with the display of the collected data and a button to receive data (0.5 hours)
+- Background execution of data collection - (0.5 hours)
+- Full-text search for collected data - (0.5 hours)
+- Scheduled data collection - (0.5 hours)
 
-* Configuration
+- Deploy the script to the server and upload the result to any server
+- Normalization of the city name to a single format (as in KLADR)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Total - 9 hours
