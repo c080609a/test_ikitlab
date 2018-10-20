@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Parser::Page do
+RSpec.describe Parser::PageService do
   let(:nokogiri_page) do
     path_to_page = "#{Dir.pwd}/spec/fixtures/files/page.html"
     Nokogiri::HTML(open(path_to_page))
@@ -27,7 +27,7 @@ RSpec.describe Parser::Page do
     ]
   end
 
-  it "has get_attributes method which will return expected_attributes" do
-    expect(page.get_attributes).to eq(expected_attributes)
+  it "has .call method which will return expected_attributes" do
+    expect(page.call).to eq(expected_attributes)
   end
 end

@@ -108,6 +108,7 @@ GEM
       railties (>= 3.0.0)
     faraday (0.15.3)
       multipart-post (>= 1.2, < 3)
+    ffaker (2.10.0)
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -247,6 +248,8 @@ GEM
       activemodel (>= 4.2)
       elasticsearch (>= 5)
       hashie
+    shoulda-matchers (3.1.2)
+      activesupport (>= 4.0.0)
     sidekiq (5.2.2)
       connection_pool (~> 2.2, >= 2.2.2)
       rack-protection (>= 1.5.0)
@@ -300,6 +303,7 @@ DEPENDENCIES
   capistrano-sidekiq
   coffee-rails (~> 4.2)
   factory_bot_rails
+  ffaker
   jbuilder (~> 2.5)
   jquery-rails
   kaminari
@@ -314,6 +318,7 @@ DEPENDENCIES
   rubocop-rspec
   sass-rails (~> 5.0)
   searchkick
+  shoulda-matchers (~> 3.1)
   sidekiq
   turbolinks (~> 5)
   uglifier (>= 1.3.0)

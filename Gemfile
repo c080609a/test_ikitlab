@@ -23,11 +23,13 @@ gem "bootsnap", ">= 1.1.0", require: false
 
 group :development, :test do
   gem "factory_bot_rails"
+  gem "ffaker"
   gem "listen", ">= 3.0.5", "< 3.2"
   gem "pry"
   gem "rspec-rails", "~> 3.5"
   gem "rubocop", require: false
   gem "rubocop-rspec", require: false
+  gem "shoulda-matchers", "~> 3.1"
   gem "web-console", ">= 3.3.0"
 end
 
